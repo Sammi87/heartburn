@@ -1,0 +1,5 @@
+.container {
+  text-align: center;
+  background: radial-gradient(circle, var(--gradient-inner) 0%, var(--gradient-outer) 100%);
+  height: 100vh;
+}
