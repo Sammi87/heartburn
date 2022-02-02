@@ -1,7 +1,9 @@
-import { NEXT, OUTCOME, PREVIOUS, SELECT } from "./types";
+import { NEXT, OUTCOME, PREVIOUS, RESET, SELECT } from "./types";
 
 function FormReducer(state, action) {
   switch (action.type) {
+    case RESET:
+      return action.payload;
     case NEXT:
       return {
         ...state,
@@ -24,6 +26,9 @@ function FormReducer(state, action) {
     case OUTCOME:
       return {
         ...state,
+        previousAnswers: action.payload
+          ? [...state.previousAnswers, { ...state.current }]
+          : [...state.previousAnswers],
         outcome: action.payload,
       };
     default:

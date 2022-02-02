@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    border: none;
+    margin: 0;
+}
+
+.container > * {
+    margin-top: auto;
+}
+
+.answers {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    padding: var(--gap-default) 0 var(--gap-m);
+    position: relative;
+
+}
+
+.title {
+    color: var(--primary-text);
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.back {
+    background: none;
+    border: none;
+}
+
+.back svg {
+    width: 13.5px;
+    height: 24px;
+}
+
+.progress {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--grey);
+    bottom: 0;
+}
+
+.progress:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--progress);
+    background: var(--primary);
+}

@@ -1,0 +1,28 @@
+.container {
+    font-weight: bold;
+    padding: 16px;
+    border-radius: 50px;
+    color: var(--primary);
+    outline: 2px solid var(--grey);
+    flex-basis: 39%;
+    cursor: pointer;
+    position: relative;
+}
+
+.button {
+    flex-basis: 47%;
+}
+
+.checkmark {
+    position: absolute;
+    background: var(--white);
+    right: var(--gap-m);
+    border-radius: 50%;
+    width: var(--gap-default);
+    height: var(--gap-default);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+}

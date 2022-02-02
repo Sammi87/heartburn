@@ -1,7 +1,7 @@
 import { createContext, useReducer } from "react";
 import formData from "../../data/form.json";
 import FormReducer from "./FormReducer";
-import { NEXT, OUTCOME, PREVIOUS, SELECT } from "./FormReducer/types";
+import { NEXT, OUTCOME, PREVIOUS, RESET, SELECT } from "./FormReducer/types";
 import { normalizeData } from "../../utils";
 
 const init = () => {
@@ -66,14 +66,19 @@ function FormContextProvider({ children }) {
         (acc, curr) => acc + answers[curr.answerId].score,
         0
       );
-      if (max_score > score || !(typeof max_score === "undefined")) {
+      if (outcome && (max_score > score || typeof max_score === "undefined")) {
         dispatch({ type: OUTCOME, payload: outcome });
+        return;
       }
     }
   }
 
+  function reset() {
+    dispatch({ type: RESET, payload: init() });
+  }
+
   return (
-    <FormContext.Provider value={{ ...state, select, previous, next }}>
+    <FormContext.Provider value={{ ...state, select, previous, next, reset }}>
       {children}
     </FormContext.Provider>
   );

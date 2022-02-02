@@ -9,8 +9,12 @@
   --gradient-outer: var(--primary);
 
   --gap-unit: 4px;
+  --gap-s: calc(2 * var(--gap-unit));
+  --gap-m: calc(3 * var(--gap-unit));
   --gap-default: calc(5 * var(--gap-unit));
   --gap-l: calc(10 * var(--gap-unit));
+
+  --radius-default: 10px;
 }
 
 body {
@@ -18,4 +22,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button:hover:not(:disabled) {
+  cursor: pointer;
 }

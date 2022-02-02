@@ -1,0 +1,47 @@
+.button {
+    font-weight: bold;
+    padding: 16px;
+    border-radius: 10px;
+    position: relative;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+}
+
+.round {
+    border-radius: 50px;
+}
+
+.stroked {
+    color: var(--primary);
+    position: relative;
+    background: var(--white);
+}
+
+.stroked:after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+}
+
+.round.stroked:after {
+    border-radius: 50px;
+}
+
+.button:disabled {
+    background: var(--grey);
+    color: var(--disabled)
+}
+
+.secondary {
+    background: none;
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.button > svg {
+    position: absolute;
+    right: var(--gap-m);
+}

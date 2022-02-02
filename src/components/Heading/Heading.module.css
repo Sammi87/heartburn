@@ -1,0 +1,19 @@
+.heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-text);
+    margin-bottom: var(--gap-default);
+    position: relative;
+    padding-bottom: var(--gap-m);
+    text-align: left;
+}
+
+.heading:after {
+    position: absolute;
+    content: "";
+    width: 10%;
+    background: var(--grey);
+    left: 0;
+    bottom: 0;
+    height: 3px;
+}
